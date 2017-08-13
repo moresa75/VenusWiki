@@ -17,6 +17,12 @@ The program view displays the assembled program. It contains three columns:
 * __Basic Code__: the assembly code after pseudoinstruction expansion and linking.
 * __Original Code__: the original code in the program.
 
+## Debugging
+
+The instruction which is about to be executed is highlighted in green.
+
+In order to add a breakpoint, simply click on the instruction. This will cause the row to be highlighted red, indicating that a breakpoint has been set. To remove the breakpoint, click it again.
+
 # Sidebar View
 
 ## Registers
