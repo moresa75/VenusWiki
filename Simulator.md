@@ -44,6 +44,6 @@ The display settings can be used to change how values are displayed. By default,
     * If the number is too big (not between 0 and 255), it is displayed as hex instead.
     * Anything which is in ASCII but not printable is displayed as the unicode replacement glyph: �
 
-## Console Output
+# Console Output
 
 The console output is used for [[ecalls|Environmental Calls]] and displaying any errors which occur.
