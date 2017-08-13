@@ -1,10 +1,10 @@
 # User Guide
 
-* RISC-V
+* Writing RISC-V in venus
     * [[Supported Instructions]]
     * [[Pseudoinstructions]]
     * [[Assembler Directives]]
     * [[Environmental Calls]]
-* venus
+* Using venus
     * [[Editor]]
     * [[Simulator]]
