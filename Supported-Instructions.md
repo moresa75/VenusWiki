@@ -1,0 +1,1 @@
+At the moment, venus supports most of the [RV32IM standard](https://riscv.org/specifications/). `ebreak`, `fence`, `fence.i` and cycle counter instructions are not currently supported.
