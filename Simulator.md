@@ -4,7 +4,7 @@ The Simulator is the main component of venus.
 
 The following controls are available:
 
-* __Run__ / __Stop__: runs the program until it terminates. While running, the program can be stopped by clicking it again.
+* __Run__ / __Stop__: runs the program until it terminates or a breakpoint is hit. While running, the program can be stopped by clicking it again.
 * __Step__: executes the highlighted instruction.
 * __Prev__: undo the previously executed instruction.
 * __Reset__: resets the simulator to its initial state (equivalent to reassembling the program).
