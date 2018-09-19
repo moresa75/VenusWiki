@@ -9,7 +9,12 @@ The following environmental calls are currently supported.
 | 9          | sbrk            | allocates `a1` bytes on the heap, returns pointer to start in `a0`  |
 | 10         | exit            | ends the program                                                    |
 | 11         | print_character | prints ASCII character in `a1`                                      |
+| 13         | openFile        | Opens a file WIP                                                    |
+| 14         | readFile        | Read a file WIP                                                     |
+| 15         | writeFile       | Write a file WIP                                                    |
+| 16         | closeFile       | Closes a file WIP                                                   |
 | 17         | exit2           | ends the program with return code in `a1`                           |
+| 34         | printHex        | prints hex in `a1`                                                  |
 
 The environmental calls are intended to be somewhat backwards compatible with [SPIM's syscalls](https://www.doc.ic.ac.uk/lab/secondyear/spim/node8.html).
 
