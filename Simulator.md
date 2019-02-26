@@ -25,6 +25,17 @@ In order to add a breakpoint, simply click on the instruction. This will cause t
 
 Another option is if you always want to break at a certain point in the code, you can just put an `ebreak` where you want the debugger to stop at. The debugger will stop just before it executes the instruction after the `ebreak`.
 
+### Debugging Tips
+Debugging RISC-V can be hard! Hopefully Venus can help you step though your code. If you are struggling with understanding what is actually happening, I recommend that you first analyze your code and write out what you expect it to do. Then go into the debugger and step through to see if your program matches what you expected it to do. This can be hard and time-consuming but I found for myself, this was the most helpful. Using breakpoints can be helpful but make sure you are looking at the right time to break. 
+Currently Venus does not support conditional breakpoints but you can always make a branch like this to force a conditional breakpoint:
+```
+beq a0 x0 nobreak
+    ebreak
+nobreak:
+    nop # This is is the next line of your code which should be executed if the break is or is not taken.
+```
+Make sure you have custom labels for all of the breakpoints you may set since Venus does not allow for duplicate labels in a file. What this code is doing is a conditional where we want to break when `a0 != 0` since if the condition is such that `a0 == 0` We will jump to nobreak which means the `ebreak` will never be executed thus not executing that breakpoint. Note that ebreak only works on the Webversion at the moment.
+
 # Sidebar View
 
 ## Registers
