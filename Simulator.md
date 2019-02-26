@@ -34,7 +34,9 @@ beq a0 x0 nobreak
 nobreak:
     nop # This is is the next line of your code which should be executed if the break is or is not taken.
 ```
-Make sure you have custom labels for all of the breakpoints you may set since Venus does not allow for duplicate labels in a file. What this code is doing is a conditional where we want to break when `a0 != 0` since if the condition is such that `a0 == 0` We will jump to nobreak which means the `ebreak` will never be executed thus not executing that breakpoint. Note that ebreak only works on the Webversion at the moment.
+Make sure you have custom labels for all of the breakpoints you may set since Venus does not allow for duplicate labels in a file. What this code is doing is a conditional where we want to break when `a0 != 0` since if the condition is such that `a0 == 0` We will jump to nobreak which means the `ebreak` will never be executed thus not executing that breakpoint. If that condition is not true, we will execute the `ebreak` which will cause Venus to break on the nop (which is just a placeholder for the instruction which you want to conditionally stop before it is executed).
+
+Note that ebreak only works on the Webversion at the moment.
 
 # Sidebar View
 
