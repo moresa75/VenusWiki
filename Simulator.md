@@ -23,6 +23,8 @@ The instruction which is about to be executed is highlighted in green.
 
 In order to add a breakpoint, simply click on the instruction. This will cause the row to be highlighted red, indicating that a breakpoint has been set. To remove the breakpoint, click it again.
 
+Another option is if you always want to break at a certain point in the code, you can just put an `ebreak` where you want the debugger to stop at. The debugger will stop just before it executes the instruction after the `ebreak`.
+
 # Sidebar View
 
 ## Registers
@@ -39,6 +41,8 @@ The __Jump to__ select box allows jumping to a [[memory segment|Memory Segments]
 
 The __Up / Down__ buttons scroll the memory view. __Up__ moves towards higher addresses, and __down__ moves towards lower addresses.
 
+The __Address__ box allows you to jump to a specific address of memory.
+
 ## Display Settings
 
 The display settings can be used to change how values are displayed. By default, values are displayed in unsigned hexadecimal.
@@ -53,3 +57,7 @@ The display settings can be used to change how values are displayed. By default,
 # Console Output
 
 The console output is used for [[ecalls|Environmental Calls]] and displaying any errors which occur.
+
+# Exit Code
+
+The web version will now display an exit code when the program finishes. This may be due to the program calling an ecall or the PC counter going beyond the loaded text section. If your program goes beyond the program’s text, it will determine the exit code from the register `a0`. You can think of it as returning an int from main. The JV version will actually cause Venus to exit with that error code. Note that Venus jvm currently exits with a `-1` error code when an internal error occurs (aka. Assembly error).
