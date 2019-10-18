@@ -18,6 +18,7 @@ The following environmental calls are currently supported.
 | 19         | feof            | Takes in: `a1` = FileDescriptor. Returns a nonzero value when the end of file is reached otherwise, it returns 0. |
 | 20         | ferror          | Takes in: `a1` = FileDescriptor. Returns Nnnzero value if the file stream has errors occurred, ​0​ otherwise. |
 | 34         | printHex        | prints hex in `a1`                                                  |
+| 0x3CC      | vlib            | Please check out the [vlib page](Venus's-optimized-clib) to see what functions you can use! |
 
 The environmental calls are intended to be somewhat backwards compatible with [SPIM's syscalls](https://www.doc.ic.ac.uk/lab/secondyear/spim/node8.html).
 
